@@ -1,49 +1,49 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search, User, Heart, ShoppingCart } from 'lucide-react';
 
 export const MainNavigation: React.FC = () => {
   return (
-    <nav className="w-full h-[76px] lg:h-[86px] bg-brand-ivory flex items-center border-b border-brand-border/40">
+    <nav className="w-full h-[76px] lg:h-[86px] bg-white flex items-center border-b border-brand-border/40">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12 flex justify-between items-center h-full">
         {/* Logo */}
         <div className="flex items-center">
-          <img 
-            src="/logo.png" 
-            alt="BCON Healthcare Logo" 
-            className="h-[70px] lg:h-[80px] w-auto object-contain scale-[1.1] lg:scale-[1.2] origin-left" 
-          />
+          <Link to="/">
+            <img 
+              src="/logo.png" 
+              alt="BCON Healthcare Logo" 
+              className="h-[70px] lg:h-[80px] w-auto object-contain scale-[1.1] lg:scale-[1.2] origin-left" 
+            />
+          </Link>
         </div>
 
         {/* Links (Desktop) */}
         <div className="hidden lg:flex items-center h-full gap-7 lg:gap-8 text-[14px] font-medium text-brand-secondary-navy">
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          <Link to="/" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             Home
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-100 transition-transform origin-left"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          </Link>
+          <Link to="/shop" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             Shop
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            Categories
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          </Link>
+
+          <Link to="/about" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             About BCON
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          </Link>
+          <Link to="/solutions" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             Healthcare Solutions
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          </Link>
+          <Link to="/blogs" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             Blogs
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
-          <a href="#" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
+          </Link>
+          <Link to="/contact" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
             Contact
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </a>
+          </Link>
         </div>
 
         {/* Icons */}

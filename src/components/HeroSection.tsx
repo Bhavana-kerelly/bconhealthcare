@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -67,15 +68,15 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-[16px] lg:gap-[20px]"
           >
-            <button className="group inline-flex items-center justify-center h-[48px] lg:h-[52px] w-full sm:w-[240px] bg-brand-navy text-white text-[14px] lg:text-[15px] font-medium rounded-[26px] hover:bg-[#162B48] transition-colors duration-250 px-6">
+            <Link to="/shop" className="group inline-flex items-center justify-center h-[48px] lg:h-[52px] w-full sm:w-[240px] bg-brand-navy text-white text-[14px] lg:text-[15px] font-medium rounded-[26px] hover:bg-[#162B48] transition-colors duration-250 px-6">
               Shop Healthcare Products
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-250 group-hover:translate-x-[4px]" />
-            </button>
+            </Link>
             
-            <button className="group inline-flex items-center justify-center h-[48px] lg:h-[52px] w-full sm:w-[180px] bg-transparent border border-[#8EA2B5] text-brand-navy text-[14px] lg:text-[15px] font-medium rounded-[26px] hover:bg-white/50 transition-colors duration-250 px-6">
+            <Link to="/about" className="group inline-flex items-center justify-center h-[48px] lg:h-[52px] w-full sm:w-[180px] bg-transparent border border-[#8EA2B5] text-brand-navy text-[14px] lg:text-[15px] font-medium rounded-[26px] hover:bg-white/50 transition-colors duration-250 px-6">
               Explore BCON
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-250 group-hover:translate-x-[4px]" />
-            </button>
+            </Link>
           </motion.div>
         </div>
 
