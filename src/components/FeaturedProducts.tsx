@@ -9,14 +9,14 @@ const featuredProducts = [
     category: "Medical Devices",
     name: "Omron Blood Pressure Monitor",
     description: "Accurate. Reliable. Easy to use.",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/blood-pressure-monitor.jpg",
   },
   {
     badge: "New",
     category: "Personal Care",
     name: "Skin Cleanser",
     description: "For sensitive skin.",
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/skin-cleanser.jpg",
   },
   {
     badge: "",

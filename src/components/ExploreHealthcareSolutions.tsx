@@ -99,7 +99,7 @@ export const ExploreHealthcareSolutions: React.FC = () => {
           {solutions.map((solution) => (
             <div 
               key={solution.id} 
-              className="flex flex-col bg-white border border-[#e4eff5] rounded-[12px] overflow-hidden h-[340px] md:h-[420px] hover:shadow-[0_4px_12px_rgba(16,73,107,0.06)] transition-shadow duration-300"
+              className="flex flex-col bg-white border border-[#e4eff5] rounded-[12px] overflow-hidden hover:shadow-[0_4px_16px_rgba(16,73,107,0.08)] transition-all duration-300"
             >
               <div className="w-full h-[160px] md:h-[200px] flex-shrink-0 bg-gray-100">
                 <img 
@@ -109,8 +109,8 @@ export const ExploreHealthcareSolutions: React.FC = () => {
                 />
               </div>
               
-              <div className="flex flex-col flex-1 p-[24px] md:p-[32px] bg-[#fcfdfe]">
-                <div className="mb-4">
+              <div className="flex flex-col flex-1 p-[24px] md:p-[28px] bg-[#fcfdfe]">
+                <div className="mb-3.5">
                   {solution.icon}
                 </div>
                 
@@ -118,17 +118,9 @@ export const ExploreHealthcareSolutions: React.FC = () => {
                   {solution.title}
                 </h3>
                 
-                <p className="text-[#658097] text-[12px] md:text-[14px] leading-[1.5] flex-1">
+                <p className="text-[#658097] text-[13px] md:text-[14px] leading-[1.5]">
                   {solution.description}
                 </p>
-                
-                <Link 
-                  to={solution.link}
-                  className="flex items-center text-[#103F60] text-[14px] md:text-[16px] font-medium hover:underline mt-4 group w-fit"
-                >
-                  Explore
-                  <ArrowRight className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] ml-1 transition-transform group-hover:translate-x-0.5" />
-                </Link>
               </div>
             </div>
           ))}

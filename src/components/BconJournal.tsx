@@ -36,7 +36,7 @@ const journalArticles: JournalArticle[] = [
 
 export const BconJournal: React.FC = () => {
   return (
-    <section className="w-full bg-white pb-[80px] lg:pb-[100px]">
+    <section id="journal" className="w-full bg-white pb-[80px] lg:pb-[100px]">
       <div className="w-full max-w-[1440px] mx-auto px-[20px] md:px-[32px] lg:px-[48px]">
         
         {/* Header Row */}

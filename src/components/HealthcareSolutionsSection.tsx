@@ -57,13 +57,13 @@ export const HealthcareSolutionsSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row overflow-hidden rounded-[8px] bg-white shadow-sm border border-gray-100 mb-4">
           
           {/* Left Panel - Dark Navy */}
-          <div className="w-full lg:w-1/2 bg-brand-navy p-[32px] md:p-[40px] lg:p-[48px] flex flex-col justify-between min-h-[400px]">
+          <div className="w-full lg:w-1/2 bg-brand-navy p-[32px] md:p-[40px] lg:p-[48px] flex flex-col justify-between min-h-[420px]">
             <motion.h2 
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-white text-[22px] lg:text-[27px] font-heading font-semibold leading-[1.1] mb-12 max-w-[400px]"
+              className="text-white text-[24px] lg:text-[30px] font-heading font-semibold leading-[1.15] mb-10 max-w-[440px]"
             >
               More Than Products.<br />
               A Commitment to Better Care.
@@ -82,10 +82,10 @@ export const HealthcareSolutionsSection: React.FC = () => {
                   <div className="text-white mb-3">
                     {item.icon}
                   </div>
-                  <h4 className="text-white text-[10px] lg:text-[11px] font-semibold mb-1.5">
+                  <h4 className="text-white text-[14px] lg:text-[15px] font-semibold mb-1.5 leading-snug">
                     {item.title}
                   </h4>
-                  <p className="text-white/70 text-[8px] lg:text-[9px] leading-[1.4]">
+                  <p className="text-white/80 text-[12px] lg:text-[13px] leading-[1.5]">
                     {item.description}
                   </p>
                 </motion.div>
@@ -96,7 +96,7 @@ export const HealthcareSolutionsSection: React.FC = () => {
           {/* Right Panel - Healthcare Solutions */}
           <div className="w-full lg:w-1/2 bg-white flex flex-col sm:flex-row">
             {/* Image Half */}
-            <div className="w-full sm:w-[45%] h-[250px] sm:h-full relative">
+            <div className="w-full sm:w-[45%] h-[260px] sm:h-auto min-h-[260px] relative">
               <img 
                 src="/healthcare-solutions.jpg" 
                 alt="Healthcare Professional" 
@@ -105,31 +105,31 @@ export const HealthcareSolutionsSection: React.FC = () => {
             </div>
             
             {/* Content Half */}
-            <div className="w-full sm:w-[55%] p-[32px] lg:p-[40px] flex flex-col justify-center">
+            <div className="w-full sm:w-[55%] p-[32px] lg:p-[44px] flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <span className="block text-[9px] font-semibold text-brand-blue tracking-[0.08em] uppercase mb-3">
+                <span className="block text-[12px] lg:text-[13px] font-bold text-brand-blue tracking-[0.08em] uppercase mb-3">
                   Bcon Healthcare Solutions
                 </span>
                 
-                <h3 className="text-[22px] lg:text-[27px] font-heading font-semibold text-brand-navy leading-[1.1] mb-4">
+                <h3 className="text-[26px] lg:text-[32px] font-heading font-semibold text-brand-navy leading-[1.15] mb-4">
                   Healthcare solutions<br />
                   beyond the shelf.
                 </h3>
                 
-                <p className="text-[10px] lg:text-[11px] text-brand-muted leading-[1.45] mb-8 max-w-[280px]">
+                <p className="text-[14px] lg:text-[15px] text-brand-muted leading-[1.6] mb-8 max-w-[360px]">
                   From home care to clinical support, BCON offers
                   a complete ecosystem of healthcare solutions
                   designed for better outcomes.
                 </p>
                 
-                <button className="group inline-flex items-center justify-center h-[32px] px-5 bg-brand-navy text-white text-[9.5px] font-medium rounded-[4px] hover:bg-brand-secondary-navy transition-colors duration-250 w-fit">
+                <button className="group inline-flex items-center justify-center h-[42px] px-6 bg-brand-navy text-white text-[13px] lg:text-[14px] font-medium rounded-[6px] hover:bg-brand-secondary-navy transition-colors duration-250 w-fit">
                   Explore Solutions
-                  <ArrowRight className="w-3 h-3 ml-1.5 transition-transform duration-250 group-hover:translate-x-0.5" />
+                  <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-250 group-hover:translate-x-0.5" />
                 </button>
               </motion.div>
             </div>
@@ -143,19 +143,19 @@ export const HealthcareSolutionsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="w-full bg-white rounded-[6px] border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] px-4 py-3 lg:py-4 flex flex-row items-center justify-between overflow-x-auto gap-6 hide-scrollbar"
+          className="w-full bg-white rounded-[6px] border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] px-5 py-3.5 lg:py-4 flex flex-row items-center justify-between overflow-x-auto gap-6 hide-scrollbar"
         >
           {solutionCategories.map((category, index) => (
             <div 
               key={category.label}
-              className={`flex items-center gap-2 flex-shrink-0 cursor-pointer group ${
+              className={`flex items-center gap-2.5 flex-shrink-0 cursor-pointer group ${
                 index !== solutionCategories.length - 1 ? "pr-6 border-r border-gray-100" : ""
               }`}
             >
               <div className="text-brand-blue/80 group-hover:text-brand-blue transition-colors">
                 {category.icon}
               </div>
-              <span className="text-[8.5px] lg:text-[9px] font-medium text-brand-navy group-hover:text-brand-blue transition-colors whitespace-nowrap">
+              <span className="text-[13px] lg:text-[14px] font-medium text-brand-navy group-hover:text-brand-blue transition-colors whitespace-nowrap">
                 {category.label}
               </span>
             </div>

@@ -1,43 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const footerColumns = [
   {
-    title: "Shop",
-    links: [
-      { label: "All Products", href: "#" },
-      { label: "Categories", href: "#" },
-      { label: "Featured Products", href: "#" },
-      { label: "New Arrivals", href: "#" },
-      { label: "Offers", href: "#" },
-    ],
-  },
-  {
     title: "Healthcare",
     links: [
-      { label: "Healthcare Solutions", href: "#" },
-      { label: "Home Healthcare", href: "#" },
-      { label: "Wellness", href: "#" },
-      { label: "Medical Devices", href: "#" },
-      { label: "Resources", href: "#" },
+      { label: "Healthcare Solutions", to: "/solutions" },
+      { label: "Home Healthcare", to: "/solutions" },
+      { label: "Wellness", to: "/solutions" },
+      { label: "Resources", to: "/#journal" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About BCON", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Blogs", href: "#" },
-    ],
-  },
-  {
-    title: "Customer Support",
-    links: [
-      { label: "Help Centre", href: "#" },
-      { label: "Shipping", href: "#" },
-      { label: "Returns", href: "#" },
-      { label: "FAQs", href: "#" },
-      { label: "Track Order", href: "#" },
+      { label: "About BCON", to: "/about" },
+      { label: "Contact", to: "/contact" },
     ],
   },
 ];
@@ -84,11 +62,13 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col w-full md:w-[40%] lg:w-[25%] lg:max-w-[280px]">
             {/* Logo */}
             <div className="flex items-center mb-6">
-              <img 
-                src="/logo.png" 
-                alt="BCON Healthcare Logo" 
-                className="h-[45px] w-auto object-contain brightness-0 invert opacity-90" 
-              />
+              <Link to="/" aria-label="BCON Healthcare Home">
+                <img 
+                  src="/logo-footer.png" 
+                  alt="BCON Healthcare Logo" 
+                  className="h-[65px] lg:h-[75px] w-auto object-contain origin-left hover:opacity-90 transition-opacity" 
+                />
+              </Link>
             </div>
             
             <p className="text-[14px] text-[#D7E0E8] leading-[1.6] mb-8 max-w-[260px]">
@@ -110,22 +90,22 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Columns 02-05 - Navigation */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 w-full md:w-[100%] lg:w-[70%] gap-y-10 gap-x-6 lg:gap-x-8 justify-between">
+          {/* Navigation Columns */}
+          <div className="flex flex-row flex-wrap gap-12 sm:gap-20 lg:gap-32">
             {footerColumns.map((column) => (
-              <div key={column.title} className="flex flex-col">
+              <div key={column.title} className="flex flex-col min-w-[140px]">
                 <h4 className="text-[16px] font-semibold text-white mb-5 tracking-wide">
                   {column.title}
                 </h4>
                 <ul className="flex flex-col gap-3">
                   {column.links.map((link) => (
                     <li key={link.label}>
-                      <a 
-                        href={link.href} 
+                      <Link 
+                        to={link.to} 
                         className="text-[14px] text-[#D7E0E8] hover:text-white transition-colors duration-200"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

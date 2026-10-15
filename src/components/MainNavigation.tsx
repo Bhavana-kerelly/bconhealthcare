@@ -1,7 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const MainNavigation: React.FC = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About BCON', path: '/about' },
+    { name: 'Healthcare Solutions', path: '/solutions' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
     <nav className="w-full h-[76px] lg:h-[86px] bg-white flex items-center border-b border-brand-border/40">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12 flex justify-between items-center h-full">
@@ -17,28 +28,31 @@ export const MainNavigation: React.FC = () => {
         </div>
 
         {/* Links (Desktop) */}
-        <div className="hidden lg:flex items-center h-full gap-7 lg:gap-8 text-[14px] font-medium text-brand-secondary-navy">
-          <Link to="/" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            Home
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-100 transition-transform origin-left"></span>
-          </Link>
+        <div className="hidden lg:flex items-center h-full gap-7 lg:gap-8 text-[14px] font-medium">
+          {navLinks.map((link) => {
+            const isActive = link.path === '/' 
+              ? currentPath === '/' 
+              : currentPath.startsWith(link.path);
 
-          <Link to="/about" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            About BCON
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </Link>
-          <Link to="/solutions" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            Healthcare Solutions
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </Link>
-          <Link to="/blogs" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            Blogs
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </Link>
-          <Link to="/contact" className="relative h-full flex items-center hover:text-brand-navy transition-colors group">
-            Contact
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-250"></span>
-          </Link>
+            return (
+              <Link 
+                key={link.path}
+                to={link.path} 
+                className={`relative h-full flex items-center transition-colors group ${
+                  isActive ? 'text-brand-navy font-semibold' : 'text-brand-secondary-navy hover:text-brand-navy'
+                }`}
+              >
+                {link.name}
+                <span 
+                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue transition-transform origin-left ${
+                    isActive 
+                      ? 'scale-x-100' 
+                      : 'scale-x-0 group-hover:scale-x-100 duration-250'
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>
