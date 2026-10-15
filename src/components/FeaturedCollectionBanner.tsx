@@ -19,7 +19,7 @@ export const FeaturedCollectionBanner: React.FC = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+            src="/featured-collection-bg.jpg" 
             alt="Healthcare Featured Collection" 
             className="absolute inset-0 w-full h-full object-cover object-center"
           />

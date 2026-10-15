@@ -98,7 +98,7 @@ export const HealthcareSolutionsSection: React.FC = () => {
             {/* Image Half */}
             <div className="w-full sm:w-[45%] h-[250px] sm:h-full relative">
               <img 
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="/healthcare-solutions.jpg" 
                 alt="Healthcare Professional" 
                 className="absolute inset-0 w-full h-full object-cover"
               />

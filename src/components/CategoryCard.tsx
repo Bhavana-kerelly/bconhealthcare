@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 export interface CategoryData {
   title: string;
@@ -34,14 +33,10 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, index }) =
       </div>
       
       {/* Content Container */}
-      <div className="w-full bg-white p-4 lg:p-5 flex flex-col justify-center min-h-[90px] flex-grow">
-        <h3 className="font-heading font-semibold text-[15px] lg:text-[17px] text-brand-navy mb-1.5 leading-tight">
+      <div className="w-full bg-white p-4 lg:p-5 flex flex-col justify-center min-h-[70px] flex-grow">
+        <h3 className="font-heading font-semibold text-[15px] lg:text-[17px] text-brand-navy leading-tight">
           {category.title}
         </h3>
-        <div className="flex items-center text-[12px] lg:text-[13px] text-brand-muted font-medium mt-auto">
-          Explore
-          <ArrowRight className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" />
-        </div>
       </div>
     </motion.a>
   );

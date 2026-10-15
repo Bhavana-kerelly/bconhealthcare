@@ -110,8 +110,8 @@ export const AboutWhyChooseUs: React.FC = () => {
             <div className="w-full h-[280px] lg:h-[350px] overflow-hidden rounded-[5px]">
               {/* Using a close visual match to a doctor's hand holding a blue object/heart or general positive medical symbol */}
               <img 
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Healthcare Professional" 
+                src="/why-choose-us.jpg" 
+                alt="Why Choose BCON Healthcare" 
                 className="w-full h-full object-cover"
               />
             </div>

@@ -36,8 +36,8 @@ export const AboutHeroSection: React.FC = () => {
       <div className="w-full lg:w-[50%] h-[400px] lg:h-full lg:absolute lg:right-0 lg:top-0 relative flex justify-end z-0">
         <div className="absolute inset-y-0 left-0 w-full lg:w-[40%] bg-gradient-to-t lg:bg-gradient-to-r from-[#EDF6FB] via-[#EDF6FB]/80 to-transparent z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-          alt="Healthcare professional with a patient" 
+          src="/about-hero.jpg" 
+          alt="About BCON Healthcare" 
           className="w-full h-full object-cover object-center lg:object-right mix-blend-normal opacity-95"
         />
       </div>

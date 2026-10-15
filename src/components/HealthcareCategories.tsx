@@ -5,32 +5,32 @@ import { CategoryCard, type CategoryData } from './CategoryCard';
 const categories: CategoryData[] = [
   {
     title: "Medical Devices",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/categories/medical-devices.jpg",
     href: "#medical-devices"
   },
   {
     title: "Personal Healthcare",
-    image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/categories/personal-healthcare.jpg",
     href: "#personal-healthcare"
   },
   {
     title: "Wellness",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/categories/wellness.jpg",
     href: "#wellness"
   },
   {
     title: "Diagnostics",
-    image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80",
+    image: "/categories/diagnostics.jpg",
     href: "#diagnostics"
   },
   {
     title: "Hospital Essentials",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/categories/hospital-essentials.jpg",
     href: "#hospital-essentials"
   },
   {
     title: "Professional Care",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/categories/professional-care.jpg",
     href: "#professional-care"
   }
 ];

@@ -7,7 +7,7 @@ const solutions = [
     id: 1,
     title: "Preventive Care",
     description: "Stay ahead of health issues with regular check-ups and screenings.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "/preventive-care.jpg",
     icon: <Activity className="w-6 h-6 md:w-8 md:h-8 text-[#103F60]" strokeWidth={1.5} />,
     link: "/solutions/preventive-care"
   },
@@ -15,7 +15,7 @@ const solutions = [
     id: 2,
     title: "Chronic Disease Management",
     description: "Better control. Better living. Expert care for long-term conditions.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "/chronic-disease.jpg",
     icon: <Stethoscope className="w-6 h-6 md:w-8 md:h-8 text-[#103F60]" strokeWidth={1.5} />,
     link: "/solutions/chronic-disease"
   },

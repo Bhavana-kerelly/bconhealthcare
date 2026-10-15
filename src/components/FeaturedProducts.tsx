@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Heart } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const featuredProducts = [
   {
@@ -8,23 +9,13 @@ const featuredProducts = [
     category: "Medical Devices",
     name: "Omron Blood Pressure Monitor",
     description: "Accurate. Reliable. Easy to use.",
-    rating: 4.8,
-    reviews: 304,
-    price: "₹ 2,999",
-    originalPrice: "₹ 3,999",
-    discount: "25% OFF",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   },
   {
     badge: "New",
     category: "Personal Care",
-    name: "Cetaphil Gentle Skin Cleanser",
+    name: "Skin Cleanser",
     description: "For sensitive skin.",
-    rating: 4.7,
-    reviews: 89,
-    price: "₹ 749",
-    originalPrice: "₹ 999",
-    discount: "25% OFF",
     image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   },
   {
@@ -32,11 +23,6 @@ const featuredProducts = [
     category: "Wellness",
     name: "Fitbit Inspire 3",
     description: "Track your health. Live better.",
-    rating: 4.6,
-    reviews: 210,
-    price: "₹ 11,999",
-    originalPrice: "₹ 14,999",
-    discount: "20% OFF",
     image: "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=400&q=80",
   },
   {
@@ -44,11 +30,6 @@ const featuredProducts = [
     category: "Diagnostics",
     name: "Accu-Chek Glucose Monitor",
     description: "Simple. Accurate. Trusted.",
-    rating: 4.9,
-    reviews: 156,
-    price: "₹ 1,899",
-    originalPrice: "₹ 2,499",
-    discount: "24% OFF",
     image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=400&q=80",
   }
 ];
@@ -92,7 +73,7 @@ export const FeaturedProducts: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="group bg-white rounded-[8px] p-4 lg:p-5 border border-[#F0F0F0] hover:border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-[2px] transition-all duration-300 flex flex-col h-full min-h-[340px]"
+                  className="group bg-white rounded-[8px] p-4 lg:p-5 border border-[#F0F0F0] hover:border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-[2px] transition-all duration-300 flex flex-col h-full"
                 >
                   {/* Product Image Area */}
                   <div className="relative w-full aspect-[4/3] bg-[#F9FAFB] rounded-[4px] mb-4 overflow-hidden flex items-center justify-center">
@@ -116,32 +97,18 @@ export const FeaturedProducts: React.FC = () => {
                     <h3 className="text-[13px] lg:text-[14px] font-semibold text-brand-navy leading-snug mb-1.5">
                       {product.name}
                     </h3>
-                    <p className="text-[10px] lg:text-[11px] text-brand-muted mb-3 line-clamp-2">
+                    <p className="text-[10px] lg:text-[11px] text-brand-muted mb-4 line-clamp-2">
                       {product.description}
                     </p>
-                    
-                    <div className="flex items-center gap-1 mb-3">
-                      <span className="text-[#F59E0B] text-[11px]">★</span>
-                      <span className="text-[10px] font-medium text-brand-navy">{product.rating}</span>
-                      <span className="text-[9px] text-brand-muted">({product.reviews})</span>
-                    </div>
-
-                    <div className="mt-auto flex flex-col gap-1 mb-4">
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="text-[15px] font-bold text-brand-navy">{product.price}</span>
-                        <span className="text-[10px] text-brand-muted line-through">{product.originalPrice}</span>
-                      </div>
-                      <span className="text-[9px] font-medium text-brand-blue">{product.discount}</span>
-                    </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-2 mt-auto">
-                      <button className="flex-grow h-[36px] bg-brand-navy text-white text-[11px] font-medium rounded-[6px] hover:bg-brand-secondary-navy transition-colors duration-250">
-                        Add to Cart
-                      </button>
-                      <button className="w-[36px] h-[36px] flex items-center justify-center border border-gray-200 rounded-[6px] text-brand-navy hover:bg-gray-50 hover:border-gray-300 transition-colors duration-250">
-                        <Heart className="w-4 h-4 group-hover:scale-110 transition-transform duration-250" />
-                      </button>
+                    <div className="mt-auto pt-2">
+                      <Link 
+                        to="/contact"
+                        className="w-full h-[36px] bg-brand-navy text-white text-[12px] font-medium rounded-[6px] hover:bg-brand-secondary-navy transition-colors duration-250 flex items-center justify-center text-center shadow-sm"
+                      >
+                        Get Enquiry
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
